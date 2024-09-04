@@ -7,6 +7,8 @@ const Payment = () => {
   const [city, setCity] = useState("");
   const [phone, setPhone] = useState("");
   const [details, setDitails] = useState("");
+  const baseUrl = window.location.origin;
+
   const { cartId, setNumOfItems, setProducts, setTottalPrice } =
     useContext(cartContext);
   async function cashPayment() {
@@ -46,7 +48,7 @@ const Payment = () => {
     };
     try {
       const { data } = await axios.post(
-        `https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=http://localhost:5173`,
+        `https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=http://${baseUrl}`,
         x,
         {
           headers: {
@@ -67,6 +69,7 @@ const Payment = () => {
       <h2 className="text-center text-3xl font-semibold text-green-600">
         Payment
       </h2>
+      
       <div className="w-full md:w-[70%] mx-auto">
         {/* phone */}
         <div className="relative z-0 w-full mb-5 group">
