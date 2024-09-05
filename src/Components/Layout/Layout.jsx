@@ -9,11 +9,7 @@ const Layout = () => {
 <Outlet />
 
 
-   <div className='p-5 text-white bg-slate-950 text-center'>
-    <h2 className='text-4xl'>
-        Footer
-    </h2>
-   </div>
+   
     </>
   )
 }
