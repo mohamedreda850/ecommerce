@@ -67,7 +67,7 @@ const Payment = () => {
   return (
     <section className="py-[80px]">
       <h2 className="text-center text-3xl font-semibold text-green-600">
-        Payment
+        Payments
       </h2>
       
       <div className="w-full md:w-[70%] mx-auto">
