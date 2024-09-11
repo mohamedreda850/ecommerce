@@ -8,8 +8,6 @@ const Layout = () => {
    <Navbar />
 <Outlet />
 
-
-   
     </>
   )
 }
